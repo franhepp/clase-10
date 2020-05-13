@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- NO OLVIDES LOS METADATOS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+      body{font-family: 'Merriweather', serif;
+    }
+    .fucsia{
+      background-color: #d0f
+    }
+    </style>
+    <title>Ahogados por el plástico</title>
+</head>
+
+<body class="bg-light pt-5">
+
+  <nav class="navbar navbar-expand-lg navbar-light fucsia fixed-top">
+    <div class="container">
+    <a class="navbar-brand" href="index.html">Ahogados por el plástico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Ahogados por el plástico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page-1.html">Tipos de plásticos</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="page-2.html">Países que más aportan con basura</a>
+        </li>
+      </ul>
+  </div>
+    </div>
+  </nav>
+
+
+    <div class="container py-3">
+        <div class="row">
+            <header class="col-12 mb-3">
+                <h1 class="display-4 text-primary-50 py-3">Ahogados por el plástico</h1>
+                <p class="lead">El planeta bajo el agua arrecifes</p>
+                <p> Documental sobre los arrecifes, un mundo bajo el agua, de diversos tipos de animales, algas y otras especies que conviven.</p>
+            </header>
+            <section class="col-12 pt-3 bg-white">
+            <h2>Los países que más aportan basura</h2>
+            <p>La mayoría de los países que tienen costa están viviendo las consecuencias de décadas de un mal manejo de la basura y de un abuso de los envases plásticos, que finalmente terminan en el mar y lo más grave: dañando a la flora y fauna marina. 
+</p>
+            <p><a href="page-1.html">Existen distintos tipos de plásticos</a> Estos utilizados ya sea como envases de comida, cubiertos, bolsas, entre otros. Luego de su consumo si no se insertan en un basurero, estos son arrojados al mar. Una bolsa en el agua quizás no es mucho, pero imagínate si esa bolsa se multiplica por varias toneladas en varios países. En el siguiente gráfico podemos ver cuáles son los principales países que están dañando la fauna marina.</p>
+            <figure>
+                <canvas id="uci"></canvas>
+                <figcaption>https://es.statista.com/</figcaption>
+            </figure>
+            <p> Aunque existen muchos factores de por medio, como la infraestructura de un lugar, las políticas ambientales, las costumbres culturales y hasta la desinformación, el hecho es que la basura de los mares y océanos es producida por el humano. Ya sea de manera accidental o con intención, la responsabilidad es completamente nuestra y cada uno de nosotros debe cooperar para generar una diferencia.
+ </p>
+
+            </section>
+            <footer class="col-12 py-2 mt-4">
+                <small class="text-black-50 d-flex justify-content-between align-items-center">
+                    <span>Francisca Hepp</span>
+                    <span>clase 10</span>
+                </small>
+            </footer>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script>
+        Chart.defaults.global.defaultFontFamily = "'Lucida Console', 'Monaco', 'monospace'";
+        new Chart(document.getElementById('uci').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["China", "Indonesia", "Filipinas", "Vietnam", "Sri Lanka", "Egipto", "Tailandia", "Malasia", "Nigeria", "Bangladés", "Brasil", "Estados Unidos"],
+                datasets: [{
+                    label: 'PET',
+                    borderColor: '#03363E',
+                    backgroundColor: '#03363E',
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [4, 0.9, 0.5, 0.8, 0.3, 0.4, 0.2, 0.1, 0.5, 0.2, 0.1, 0.1]
+                }, {
+                    label: 'LDPE',
+                    borderColor: '#086877',
+                    backgroundColor: '#086877',
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [2.3, 1, 0.6, 0.4, 0.5, 0.3, 0.6, 0.3, 0.3, 0.4, 0.2, 0.1]
+                }, {
+                    label: 'PP',
+                    borderColor: '#54B3C4', // noten que este color coincide con el de h1{…} en el CSS
+                    backgroundColor: '#54B3C4', // esto para darle consistencia a los colores en uso
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [2.1, 0.3, 0.8, 0.6, 0.8, 0.3, 0.2, 0.5, 0.1, 0.2, 0.2, 0.1]
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'PAÍSES QUE MÁS BASURA APORTAN A LOS OCÉANOS EN TONELADAS MÉTRICAS EN MILLONES'
+                },
+                tooltips: {
+                    position: 'nearest',
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            minRotation: 90
+                        }
+                    }]
+                }
+            },
+
+        });
+    </script>
+    <!-- Lo JS de Bootstrap, que dependen de jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
