@@ -39,7 +39,7 @@
         var texto = ["Pide a los supermercados que eliminen los envases de plástico", "Compra a granel", "¡Actúa con tu consumo!", "¡Súmate a Greenpeace!", "Reduce la compra de envases plásticos", "Exige a gobiernos y empresas que actúen contra el uso excesivo de plásticos"];
         // Referencias para lo que sigue https://api.jquery.com/jquery.each/ ({ https://api.jquery.com/append/ })
         $.each( texto, function( i, frase ) {
-            $("#articulos").append("<div class='col-lg-6 col-xl-4 mb-4'><article class='bg-primary text-light p-3 shadow-sm rounded'>"+frase+"</article></div>");
+            $("#articulos").append("<div class='col-lg-6 col-xl-4 mb-4'><article class='bg-primary text-light p-3 shadow rounded'>"+frase+"</article></div>");
         });
         // Lo que sigue aprovecha Bootstrap y jQuery. Afecta a la proporción del video embebido, quitando/poniendo una clase
         $(window).bind("load resize",function() {
